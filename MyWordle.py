@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 
+# Initial Commit Version
+
 window = tk.Tk()
 window.title("Wordle")
 window.geometry("400x400")

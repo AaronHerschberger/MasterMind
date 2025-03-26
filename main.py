@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 
+# Initial Commit Version
+
 
 ## Data types
 # Workout data type

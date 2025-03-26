@@ -2,6 +2,8 @@ import random
 import tkinter as tk
 from tkinter import messagebox
 
+# Initial Commit Version
+
 def load_words():
     return ["apple", "grape", "peach", "berry", "mango"]
 

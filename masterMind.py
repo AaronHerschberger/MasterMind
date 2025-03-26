@@ -24,7 +24,7 @@ instructionsLabel.pack(padx=10, pady=10)
 entry1 = tk.Entry(width=22)
 entry1.pack()
 
-secret_sequence = "1677"
+secret_sequence = "9999"
 
 
 
