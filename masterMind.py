@@ -10,22 +10,21 @@ title = tk.Label(
     text="MasterMind",
     fg="white",
     bg="blue",
-    width=40,
     height=3
 )
-title.pack()
+title.pack(fill=tk.X)
 
 instructionsLabel = tk.Label(
     text="Enter any 4-digit sequence",
     fg="white",
     bg="purple"
 )
-instructionsLabel.pack()
+instructionsLabel.pack(padx=10, pady=10)
 
 entry1 = tk.Entry(width=22)
 entry1.pack()
 
-secret_sequence = "2345"
+secret_sequence = "1677"
 
 
 
@@ -46,8 +45,8 @@ def submitGuess():
         else:
             clueColor = "gray"
         
-        letterLabel = tk.Label(master=frame, text=guess[i], borderwidth=5, relief="sunken", bg=clueColor)
-        letterLabel.pack(side="left")
+        letterLabel = tk.Label(master=frame, text=guess[i], borderwidth=5, relief="sunken", bg=clueColor, width=2)
+        letterLabel.pack(side="left", padx=5, pady=5)
         
     if guess == secret_sequence:
         messagebox.showinfo("Congratulations", "You guessed the sequence!")
@@ -58,7 +57,7 @@ def submitGuess():
 
 
 submit_button = tk.Button(text="Submit", command=submitGuess)
-submit_button.pack()
+submit_button.pack(padx=10, pady=10)
 
 
 window.mainloop()
