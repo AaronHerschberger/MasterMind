@@ -11,7 +11,7 @@ def generate_key():
 
 # Load the encryption key from the file
 def load_key():
-    with open("key.key", "rb") as key_file:
+    with open("Password Manager/key.key", "rb") as key_file:
         return key_file.read()
 
 # Encrypt a password
@@ -25,7 +25,7 @@ def decrypt_password(encrypted_password, key):
     return fernet.decrypt(encrypted_password.encode()).decode()
 
 # Save passwords to a file
-def save_passwords(passwords, filename="passwords.json"):
+def save_passwords(passwords, filename="Password Manager/passwords.json"):
     with open(filename, "w") as file:
         json.dump(passwords, file)
 
