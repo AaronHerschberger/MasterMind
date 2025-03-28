@@ -1,5 +1,4 @@
 Dependancies
-================
 
 ## For workroutTracker.py, masterMind.py, and MyWordle.py
 # tkinter
