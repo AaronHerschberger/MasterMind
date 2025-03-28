@@ -4,9 +4,10 @@ from tkinter import messagebox
 
 window = tk.Tk()
 window.title("MasterMind")
-window.geometry("400x400")
+window.geometry("400x600")
 
 title = tk.Label(
+    font=("Arial", 20, "italic bold"),
     text="MasterMind",
     fg="white",
     bg="blue",
@@ -15,6 +16,7 @@ title = tk.Label(
 title.pack(fill=tk.X)
 
 instructionsLabel = tk.Label(
+    font=("Arial", 12),
     text="Enter any 4-digit sequence",
     fg="white",
     bg="purple"
@@ -34,6 +36,9 @@ def submitGuess():
     
     if len(guess) != 4:
         messagebox.showerror("Error", "Please enter a 4-number sequence.")
+        return
+    if not guess.isdigit():
+        messagebox.showerror("Error", "Please enter only numbers.")
         return
     
     frame = tk.Frame(master=window)
