@@ -29,6 +29,8 @@ instructionsLabel.pack(padx=10, pady=10)
 # Input entry field
 entry1 = tk.Entry(width=22)
 entry1.pack()
+# Bind Enter key to submitGuess
+entry1.bind("<Return>", lambda event: submitGuess())
 
 # Secret sequence to guess
 secret_sequence = "1776"                            # Predefined sequence for testing
@@ -36,9 +38,11 @@ secret_sequence = "1776"                            # Predefined sequence for te
 secret_sequence = str(random.randint(0, 9999)).zfill(4) # Generate a random 4-digit number, padded with zeros
 
 
+
 # Function to handle guess submission
 def submitGuess():
     guess = entry1.get()                          # Get user input
+
     entry1.delete(0, tk.END)                      # Clear input field
     
     if len(guess) != 4:                           # Validate length
